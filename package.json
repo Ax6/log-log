@@ -1,6 +1,6 @@
 {
   "name": "log-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy and friendly logging",
   "main": "index.js",
   "scripts": {
