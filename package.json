@@ -1,0 +1,11 @@
+{
+  "name": "my-logs",
+  "version": "1.0.0",
+  "description": "Easy and friendly logging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ax_6",
+  "license": "ISC"
+}
