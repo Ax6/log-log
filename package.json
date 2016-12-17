@@ -1,11 +1,12 @@
 {
   "name": "log-log",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Easy and friendly logging",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/Ax6/log-log",
   "author": "Ax_6",
   "license": "ISC",
   "dependencies": {
