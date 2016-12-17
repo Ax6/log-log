@@ -33,10 +33,12 @@ log.test("Sample test");
 ### debug(message[, depthLevel])
  * `message` {String | Object}
  * [`depthLevel`] {Number} Optional
+
 When passing objects they get stringified
 
 ### error(message) | warning | success | test
  * `message` {String | Object}
+
 When passing objects they get stringified
 
 ### disableDebug() | enableDebug()
@@ -47,8 +49,10 @@ Boolean returned
 
 ### setDepthLevel(level)
  * `level` {Number}
+
 You can specify debug depth level in order to filter unwanted deep debug messages
 
 ### changeColor(color)
  * `color` {String}
+
 You can access available colors from `LogLog.COLORS` object
