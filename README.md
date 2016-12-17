@@ -30,29 +30,25 @@ log.test("Sample test");
 ![example](https://i.gyazo.com/a3cca4a6edba039d375aee36b58dcdc5.png)
 
 ## Methods
-### debug
-**Parameters**
- - message {String | Object}
- - [depthLevel] {Number} Optional
+### debug(message[, depthLevel])
+ * `message` {String | Object}
+ * [`depthLevel`] {Number} Optional
 When passing objects they get stringified
 
-error | warning | success | test
-**Parameters**
- - message {String | Object}
+### error(message) | warning | success | test
+ * `message` {String | Object}
 When passing objects they get stringified
 
-### disableDebug | enableDebug
-Will affect only .debug messages
+### disableDebug() | enableDebug()
+Will affect only `.debug` messages
 
-### isDebugEnabled
+### isDebugEnabled()
 Boolean returned
 
-### setDepthLevel
-**Parameters**
- - level {Number}
-You can specify debug depth in order to filter unwanted deep debug messages
+### setDepthLevel(level)
+ * `level` {Number}
+You can specify debug depth level in order to filter unwanted deep debug messages
 
-### changeColor
-**Parameters**
- - color {String}
-You can access available colors from LogLog.COLORS object
+### changeColor(color)
+ * `color` {String}
+You can access available colors from `LogLog.COLORS` object
