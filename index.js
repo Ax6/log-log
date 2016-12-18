@@ -162,7 +162,7 @@ Logs.prototype._getFormattedName = function () {
     if (this.applicationName) {
         return " <" + this.applicationName + "> ";
     } else {
-        return "";
+        return " ";
     }
 };
 
