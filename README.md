@@ -1,5 +1,5 @@
 # log-log
-Easy and friendly logging
+Easy and friendly logging with timestamp
 
 ## Installation
 ```bash
@@ -28,6 +28,13 @@ log.success("Sample success");
 log.test("Sample test");
 ```
 ![example](https://i.gyazo.com/a3cca4a6edba039d375aee36b58dcdc5.png)
+
+## Creating a new instance
+### new LogLog([logOptions])
+ * `logOptions` Object used to pass a few logging options, all properties are optional
+    * `applicationName` Name given to your `LogLog` instance, useful to distinguish classes and objects
+    * `color` You can access available colors from `LogLog.COLORS` object
+    * `dim` Default set to `false`, useful if you don't want logs to stand out too much
 
 ## Methods
 ### debug(message[, depthLevel])
