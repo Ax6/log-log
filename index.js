@@ -1,7 +1,6 @@
 /**
  * Created by aaronrusso on 16/12/2016.
  */
-module.exports = Logs;
 var util = require('util');
 var events = require('events');
 var chalk = require('chalk');
@@ -198,3 +197,18 @@ Logs.prototype._getNiceDate = function (mode, myDate) {
     }
 };
 
+/**
+ * @constructor
+ */
+function LogLog() {
+    for (var property in Logs) {
+        if (Logs.hasOwnProperty(property)) {
+            this[property] = Logs[property];
+        }
+    }
+    this.create = function (options) {
+        return new Logs(options);
+    };
+}
+
+module.exports = new LogLog();

@@ -10,13 +10,13 @@ $ npm install log-log
 Ready to go
 ```js
 var LogLog = require('log-log');
-var log = new LogLog();
+var log = LogLog.create();
 
 log.debug("Debug some stuff");
 ```
 Simple demo
 ```js
-var log = new LogLog({applicationName: "Demo", color: LogLog.COLORS.CYAN});
+var log = LogLog.create({applicationName: "Demo", color: LogLog.COLORS.CYAN});
 
 log.debug("Hello!");
 
@@ -30,11 +30,13 @@ log.test("Sample test");
 ![example](https://i.gyazo.com/a3cca4a6edba039d375aee36b58dcdc5.png)
 
 ## Creating a new instance
-### new LogLog([logOptions])
+### LogLog.create([logOptions])
  * `logOptions` Object used to pass a few logging options, all properties are optional
     * `applicationName` Name given to your `LogLog` instance, useful to distinguish classes and objects
     * `color` You can access available colors from `LogLog.COLORS` object
     * `dim` Default set to `false`, useful if you don't want logs to stand out too much
+
+`create` will return a `Logs` instance. This object will have the following methods
 
 ## Methods
 ### debug(message[, depthLevel])
