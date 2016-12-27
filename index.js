@@ -152,7 +152,7 @@ Logs.prototype._msg = function (_msg, _preMsg) {
 
 Logs.prototype._getFormattedMessage = function (_msg) {
     if (typeof _msg === "object") {
-        _msg = JSON.stringify(util.inspect(_msg));
+        _msg = util.inspect(_msg).replace(new RegExp("\n", "g"), "");
     }
     return (this.color ? chalk[this.color](_msg) : _msg);
 };
