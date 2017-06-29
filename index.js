@@ -22,6 +22,7 @@ function Logs(logOptions) {
     this.applicationName = "";
     this.color = Logs.COLORS.DEFAULT;
     this.dim = false;
+    this.progressBarLength = 40;
     if (logOptions && logOptions.hasOwnProperty("applicationName")) {
         this.applicationName = logOptions.applicationName;
     }
@@ -140,6 +141,21 @@ Logs.prototype.enableDebug = function () {
  */
 Logs.prototype.disableDebug = function () {
     this._debugFlag = false;
+};
+
+Logs.prototype.progressBar = function (currentValue, maximumValue) {
+    if (currentValue <= maximumValue && currentValue >= 0) {
+        var barLength = this.progressBarLength;
+        var hashes = parseInt(((currentValue * barLength) / maximumValue) + 0.5);
+        var percent = parseInt((currentValue / maximumValue) * 100);
+        this.debug("[" + Array(hashes + 1).join("#") + Array(barLength - hashes + 1).join(" ") + "] " + percent + "% (" + currentValue + "/" + maximumValue + ")")
+    } else {
+        this.debug("[???]% Can't draw percentage bar, check input values.");
+    }
+};
+
+Logs.prototype.callStack = function () {
+    console.log(new Error("Call stack:").stack);
 };
 
 Logs.prototype._msg = function (_msg, _preMsg) {
